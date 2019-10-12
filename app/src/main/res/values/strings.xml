@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SimpleListView</string>
+    <string name="shopping_item_title">ShoppingItemTitle</string>
+    <string name="shopping_item_image">Image for Shopping Item</string>
+    <string name="shopping_item_description">ShoppingItemDescription</string>
+    <string name="shopping_item_amount">999 Stk.</string>
+    <string name="snackbar_shopping_item_bought">GEKAUFT!</string>
+</resources>

@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.schneiderchristian.simplelistview.adapters.ShoppingListAdapter;
@@ -58,11 +59,13 @@ public class MainActivity extends AppCompatActivity {
                  * Dadurch entsteht ein Button mit der Aufschrift GEKAUFT! auf der Snackbar.
                  * Beim Klick auf diesen Button wird die onClick()-Methode aufgeführt, die das Objekt aus der Testdaten-Liste entfernt.
                  * Dies entfernt allerdings NICHT die Daten aus dem ListView.
-                 * Dazu muss noch der Adapter mittels seiner notifyDataSetChanged()-Methode informiert werden, der den ListView dann entsprechend "neu"zusammenbaut"
+                 * Dazu muss noch der Adapter mittels seiner notifyDataSetChanged()-Methode informiert werden, der den ListView dann entsprechend "neu" zusammenbaut"
                  */
                 snackbar.setAction(R.string.snackbar_shopping_item_bought, new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        //Erzeugt Toast zur Information über den Löschvorgang des gewählten ListView-Elements
+                        Toast.makeText(getApplicationContext(), touchedItem.getName() + " gelöscht!", Toast.LENGTH_LONG).show();
                         demoContent.remove(touchedItem);
                         shoppingListAdapter.notifyDataSetChanged();
                     }

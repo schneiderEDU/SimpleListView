@@ -1,7 +1,7 @@
 package com.schneiderchristian.simplelistview.models;
 
 /**
- * Class for holding data for different shopping items
+ * Klasse für die Datenhaltung der einzelnen ShoppingItem-Objekte
  */
 public class ShoppingItem {
     private String id;
@@ -51,11 +51,11 @@ public class ShoppingItem {
     }
 
     /**
-     * @param id unique identifier for the item
-     * @param name Name of the item
-     * @param description Further description of the item
-     * @param amount Amount of the item as number
-     * @param source Source of the item (e.g. grocery store)
+     * @param id Eindeutige ID für ein Objekt, wird später automatisch gehandled
+     * @param name Name des Artikels der gekauft werden soll
+     * @param description weitere Informationen zum Artikel
+     * @param amount Menge des Artikels inkl. Einheit (Stk., l, kg,...)
+     * @param source Herkunft des Artikels, implementiert sind butcher, drugstore, supermarket und ein default-Wert für alle anderen Fälle
      */
     public ShoppingItem(String id, String name, String description, String amount, String source) {
         this.id = id;
